@@ -4,7 +4,7 @@ Created on Tue Jan  7 11:38:58 2025
 
 @author: raph1177
 """
-### First simulation exercices ###
+### First simulation exercise ###
 
 ### Bias-reduced estimation of finite mixtures ###
 
@@ -767,4 +767,5 @@ plt.show()
 plt.scatter(pi1_high[d-2,0:],pi2_high[d-2,0:])
 plt.xlabel("Estiamted Pi_1 value, N=10,000")
 plt.ylabel("Estiamted Pi_2 value, N=10,000")
+
 plt.show()
