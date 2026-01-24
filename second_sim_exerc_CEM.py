@@ -629,9 +629,9 @@ for k in range(n_rep):
         loglik_total[m,0] = m
         loglik_total[m,1] = result_CEM[0][-1]
         loglik_total[m,2] = result_EM[0][-1] 
-        plt.plot(result_CEM[0])
-        plt.plot(result_EM[0])
-        plt.show()
+        #plt.plot(result_CEM[0]) #Uncomment to plot the CML function
+        #plt.plot(result_EM[0]) #Uncomment to plot the ML function
+        #plt.show() ##Uncomment to plot the functions
 
     ## Select the starting values that maximizes the log-likelihood and check the biases ##
     Init_values = Initial_values(seed=np.argmax(loglik_total[0:,1]), K=K, alpha_K = alpha_K, var_init=var_init, dens_min=1e-320)
@@ -676,4 +676,5 @@ np.savetxt('bias_var_EM_cov5_K2_500.txt', bias_var_EM, delimiter=",", fmt='%.12g
 np.savetxt('bias_pi_CEM_cov5_K2_500.txt', bias_pi_CEM, delimiter=",", fmt='%.12g') 
 np.savetxt('bias_pi_EM_cov5_K2_500.txt', bias_pi_EM, delimiter=",", fmt='%.12g') 
 np.savetxt('pi_star_rep_cov5_K2_500.txt', pi_star_rep, delimiter=",", fmt='%.12g')
+
 
