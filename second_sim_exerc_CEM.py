@@ -185,7 +185,7 @@ def Initial_values(seed, K, var_init, dens_min, alpha_K):
     Initial_precision = K*[np.linalg.inv(np.diagflat([var_init]*(N_period)))]
     return X_model, resp_init, Initial_beta, Initial_mu, Initial_precision, Time_fixed_eff_mat
 #%%
-##### EM with covariates density ######
+##### EM without covariates density ######
 def EM_without_cov_dens(K, Max_iter, tolerance, true_init=0, var_max=1000, var_min=1e-8, dens_min=1e-300):
     N_ind  = generated_data[10]
     N_period = generated_data[11]
@@ -675,6 +675,7 @@ np.savetxt('bias_var_EM_cov5_K2_500.txt', bias_var_EM, delimiter=",", fmt='%.12g
 np.savetxt('bias_pi_CEM_cov5_K2_500.txt', bias_pi_CEM, delimiter=",", fmt='%.12g') 
 np.savetxt('bias_pi_EM_cov5_K2_500.txt', bias_pi_EM, delimiter=",", fmt='%.12g') 
 np.savetxt('pi_star_rep_cov5_K2_500.txt', pi_star_rep, delimiter=",", fmt='%.12g')
+
 
 
 
