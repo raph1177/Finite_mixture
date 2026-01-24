@@ -559,7 +559,6 @@ def Relabelling_CEM(K, Max_iter):
     return pi_star_assign, class_error, bias_pi, bias_beta,bias_cov,bias_beta_w,bias_cov_w, resp_class, R_2a, R_2, RMSE, RMSE_w, RMSE_var, RMSE_var_w, Var_star_assign, Beta_star_assign, beta_iter, bias_covariates, bias_covariates_w
 #%%
 ### Check the Data-Generating Process #####
-### Continuous outcome ###
 seed=1 ## Random generation seed
 K=3 ## Number of estimated components
 K_real=3 ## True number of components  
@@ -676,5 +675,6 @@ np.savetxt('bias_var_EM_cov5_K2_500.txt', bias_var_EM, delimiter=",", fmt='%.12g
 np.savetxt('bias_pi_CEM_cov5_K2_500.txt', bias_pi_CEM, delimiter=",", fmt='%.12g') 
 np.savetxt('bias_pi_EM_cov5_K2_500.txt', bias_pi_EM, delimiter=",", fmt='%.12g') 
 np.savetxt('pi_star_rep_cov5_K2_500.txt', pi_star_rep, delimiter=",", fmt='%.12g')
+
 
 
