@@ -18,7 +18,7 @@ import matplotlib.pyplot as plt
 plt.rcParams.update({'font.size': 22})
 plt.rcParams['figure.figsize'] = [14, 7]
 import os
-os.chdir('C:\\Users\\raph1\\.spyder-py3\\Work')
+os.chdir('C:\\Users\\raph1\\.spyder-py3\\Work') ### Directory to save the results ###
 
 #%%
 ##### Generate simulated assignment data for K components with non-constant time average #####
@@ -676,3 +676,4 @@ np.savetxt('bias_var_EM_cov5_K2_500.txt', bias_var_EM, delimiter=",", fmt='%.12g
 np.savetxt('bias_pi_CEM_cov5_K2_500.txt', bias_pi_CEM, delimiter=",", fmt='%.12g') 
 np.savetxt('bias_pi_EM_cov5_K2_500.txt', bias_pi_EM, delimiter=",", fmt='%.12g') 
 np.savetxt('pi_star_rep_cov5_K2_500.txt', pi_star_rep, delimiter=",", fmt='%.12g')
+
